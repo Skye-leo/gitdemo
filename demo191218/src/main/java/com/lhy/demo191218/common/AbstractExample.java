@@ -22,12 +22,9 @@ public class AbstractExample {
 	}
     public AbstractExample(Pageable pageable) {
 		super();
-		if(pageable!=null){
-			this.pageable = pageable;
-			this.limitStart = pageable.getPageSize() * pageable.getPageNumber();
-			this.limitEnd = pageable.getPageSize();
-		}
+		setupPageable(pageable);
 	}
+
 	public void setLimitStart(Integer limitStart) {
         this.limitStart=limitStart;
     }
@@ -54,6 +51,15 @@ public class AbstractExample {
 	}
 	public void setPageable(Pageable pageable) {
 		this.pageable = pageable;
+	}
+
+	public void setupPageable(Pageable pageable) {
+		this.pageable = pageable;
+		if(pageable!=null){
+			this.pageable = pageable;
+			this.limitStart = pageable.getPageSize() * pageable.getPageNumber();
+			this.limitEnd = pageable.getPageSize();
+		}
 	}
 
 	/**

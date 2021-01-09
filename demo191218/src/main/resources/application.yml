@@ -2,10 +2,13 @@ spring:
   profiles:
     active: default
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/demo1013?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&rewriteBatchedStatements=true
+    url: jdbc:mysql://192.168.1.4:3306/demo1013?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&rewriteBatchedStatements=true
+#    url: jdbc:mysql://127.0.0.1:3306/demo1013?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&rewriteBatchedStatements=true
     username: root
     password: liuhaoyang
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+server:
+  port: 8080

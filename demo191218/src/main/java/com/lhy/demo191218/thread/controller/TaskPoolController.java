@@ -17,4 +17,16 @@ public class TaskPoolController {
         taskPoolService.insertSomeTask();
         return "true";
     }
+
+    @GetMapping("/handleTask")
+    public String handleTask(){
+        taskPoolService.handleTask();
+        return "true";
+    }
+
+    @GetMapping("/multiHandle")
+    public String multiHandle(){
+        taskPoolService.multiHandle();
+        return "true";
+    }
 }
