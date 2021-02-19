@@ -57,7 +57,7 @@ public class AbstractExample {
 		this.pageable = pageable;
 		if(pageable!=null){
 			this.pageable = pageable;
-			this.limitStart = pageable.getPageSize() * pageable.getPageNumber();
+			this.limitStart = pageable.getPageSize() * (pageable.getPageNumber()-1);
 			this.limitEnd = pageable.getPageSize();
 		}
 	}
